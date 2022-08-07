@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .p1 {
+            color: purple
+        }
+    </style>
+    <script>
+        function clicker() {
+            console.log("hi");
+            var currentCount = parseInt(document.getElementById("counter").innerHTML);
+
+            document.getElementById("counter").innerHTML = currentCount + 1;
+        }
+
+        function disco() {
+            // get every element with Disco class
+            // then for each elements do the following: 
+                // generate a random number
+                // convert that number to color
+                // apply that color 
+            var tagsWithDiscoClass = document.getElementsByClassName("disco");
+            for (var i = 0; i < tagsWithDiscoClass.length; i++) {
+                var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+                tagsWithDiscoClass[i].style.color = randomColor;
+            }
+
+        }
+    </script>
+    <title>My Hobbies</title>
+</head>
+
+<body>
+
+    <h1 class="disco">enerjin</h1>
+    <img class="center" src="profile_pic.jpeg" profile pic">
+
+        <p class="disco"><b>My Hobbies are: </b></p>
+        <ul>
+            <li class="disco">badminton</li>
+            <li class="disco">drink coffee</li>
+            <li class="disco">listen music</li>
+            <li class="disco">surfing internet</li>
+        </ul>
+        <p class="disco">Now I'm learning HTML CSS and Javascript</p>
+        <button class="disco" type="button" onclick="clicker()">Click Me!</button>
+        <button class="disco" type="button" onclick="disco()">Disco</button>
+        <p class="disco" id ="counter" >0</p>
+
+</body> 
+
+</html>
